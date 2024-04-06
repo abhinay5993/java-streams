@@ -14,7 +14,7 @@ public class StringProcessor {
 			URL url = new URL(urlAsAString);
 			return url.getDefaultPort();
 		} catch (MalformedURLException badlyWrittenException) {
-			throw new TestEnvironmentUnavailableException();
+			throw new TestEnvironmentUnavailableException("Exception : Port No Error!! ..");
 		}
 	}
 

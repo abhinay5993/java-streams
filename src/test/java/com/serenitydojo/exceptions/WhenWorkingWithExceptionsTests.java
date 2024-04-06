@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
  * - Using the Finally block to clean up
  * 
  */
+
 public class WhenWorkingWithExceptionsTests {
 	
     /**
@@ -59,4 +60,42 @@ public class WhenWorkingWithExceptionsTests {
         System.out.println("TC-04 - catchingExceptionsWhenTheFileDoesNotExist() - Executed successfully.");
     }
 
+    
+	/**
+	 * Exercise 17 - This test method is implementation from - Bonus Live Videos :
+	 * Advanced Java - Going Further With Enums section.
+	 * 
+	 */
+	@Test
+	public void shouldShowTheLengthOfAString() {
+		StringProcessor stringProcessor = new StringProcessor();
+		String result = stringProcessor.showLengthOf("some string");
+
+		assertThat(result).isEqualTo("some string has a length of 11");
+		System.out.println("TC-05 - shouldShowTheLengthOfAString() - Executed successfully.");
+	}
+
+    
+	/**
+	 * Exercise 17 - This test method is implementation from - Bonus Live Videos :
+	 * Advanced Java - Going Further With Enums section.
+	 * 
+	 */
+    @Test
+    public void shouldShowZeroForNullStrings() {
+    StringProcessor stringProcessor = new StringProcessor();
+    String result = stringProcessor.showLengthOf(null);
+
+    assertThat(result).isEqualTo("null has a length of 0");
+    System.out.println("TC-06 - shouldShowTheLengthOfAString() - Executed successfully.");
+    }
+
+    
+    @org.junit.Test(expected = TestEnvironmentUnavailableException.class)
+    public void shouldFindThePort() {
+    StringProcessor stringProcessor = new StringProcessor();
+    stringProcessor.getPortOf("A:https://www.google.com");
+    System.out.println("TC-07 - shouldFindThePort() - Executed successfully.");
+    }
+    
 }

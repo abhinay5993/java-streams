@@ -32,8 +32,10 @@ public class WhenCreatingCatAndDogObjects {
     @Test
     public void cat_makes_noise() {
     CatEntity felix = new CatEntity("Felix", 4);
-    CatEntity spot = new CatEntity("Spot","Salmon", 3);
-
+    CatEntity spot = new CatEntity("Spot","Salmon",3);
+    
+    System.out.println(felix);
+    System.out.println(spot);
     System.out.println("Cats like " + usualFood());
     System.out.println("TC-03 - cat_makes_noise() - Executed successfully.");
     }

@@ -44,5 +44,10 @@ public abstract class AbstractPetEntity {
 		this.age = age;
 	}
 
+	@Override
+	public String toString() {
+		return "AbstractPetEntity [name=" + name + ", age=" + age + "]";
+	}
+
 
 }

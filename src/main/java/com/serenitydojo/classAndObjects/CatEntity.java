@@ -64,4 +64,9 @@ public class CatEntity extends AbstractPetEntity {
 		return "plays with string";
 	}
 
+	@Override
+	public String toString() {
+		return "CatEntity [favoriteFood=" + favoriteFood + " name=" +getName()+", age="+getAge()+"]";
+	}
+
 }

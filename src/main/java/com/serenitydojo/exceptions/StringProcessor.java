@@ -11,6 +11,7 @@ public class StringProcessor {
 
 	public int getPortOf(String urlAsAString) {
 		try {
+			@SuppressWarnings("deprecation")
 			URL url = new URL(urlAsAString);
 			return url.getDefaultPort();
 		} catch (MalformedURLException badlyWrittenException) {

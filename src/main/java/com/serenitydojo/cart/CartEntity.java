@@ -6,14 +6,13 @@ import java.util.Random;
 public class CartEntity {
 
 	private Random random = new Random();
-	private List<ItemEntity> contents;
+	private List<ItemEntity> contents = new ArrayList<>();;
 
 	/**
 	 * @param contents the contents to set
 	 * 
 	 */
 	public void setContents(ItemEntity item) {
-		this.contents = new ArrayList<>();
 		this.contents.add(item);
 	}
 

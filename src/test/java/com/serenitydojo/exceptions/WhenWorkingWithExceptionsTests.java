@@ -41,14 +41,6 @@ public class WhenWorkingWithExceptionsTests {
     }
 
     
-    @Test
-    public void catchingExceptionsWhenTheFileDoesNotExist() {
-        FileLoader fileLoader = new FileLoader();
-        assertThat(fileLoader.fileContainsText("does-not-exist.txt","Hello World")).isFalse();
-        System.out.println("TC-03 - catchingExceptionsWhenTheFileDoesNotExist() - Executed successfully.");
-    }
-
-    
     /**
      * Exercise 3 - Throwing custom exceptions.
      * 
@@ -88,6 +80,14 @@ public class WhenWorkingWithExceptionsTests {
 
     assertThat(result).isEqualTo("null has a length of 0");
     System.out.println("TC-06 - shouldShowTheLengthOfAString() - Executed successfully.");
+    }
+
+    
+    @Test
+    public void catchingExceptionsWhenTheFileDoesNotExist() {
+        FileLoader fileLoader = new FileLoader();
+        assertThat(fileLoader.fileContainsText("does-not-exist.txt","Hello World")).isFalse();
+        System.out.println("TC-03 - catchingExceptionsWhenTheFileDoesNotExist() - Executed successfully.");
     }
 
     

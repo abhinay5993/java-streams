@@ -62,6 +62,14 @@ public class TransactionFeedEntryEntity {
 		return balance;
 	}
 
+	public boolean isDeposit() {
+		return withdrawal == 0;
+	}
+
+	public boolean isWithdrawl() {
+		return deposit == 0;
+	}
+
 	public static TransactionFeedEntryEntity trx(String description, String counterparty, double withdrawal,
 			double deposit, double balance) {
 		return new TransactionFeedEntryEntity(LocalDate.now(), description, counterparty, withdrawal, deposit, balance);
